@@ -67,6 +67,8 @@
 
 int main()
 {    
+    CreateQuickCpp();
+
     // Create a Dial Widget and put it at (25,25) in the window.
     // Normally, I wouldn't use magic numbers and assign these values,
     // but for demo purposes, it's nicer to focus on the specific Sagebox code.

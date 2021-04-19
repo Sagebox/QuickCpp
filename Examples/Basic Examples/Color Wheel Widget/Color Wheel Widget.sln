@@ -17,7 +17,8 @@ Global
 		Windows Debug|x86 = Windows Debug|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D5D043AB-8106-445A-94E4-1F2D6C117A81}.Debug Optimized|x64.ActiveCfg = Windows Debug Optimized|x64
+		{D5D043AB-8106-445A-94E4-1F2D6C117A81}.Debug Optimized|x64.ActiveCfg = Windows Debug|Win32
+		{D5D043AB-8106-445A-94E4-1F2D6C117A81}.Debug Optimized|x64.Build.0 = Windows Debug|Win32
 		{D5D043AB-8106-445A-94E4-1F2D6C117A81}.Debug Optimized|x86.ActiveCfg = Windows Debug Optimized|Win32
 		{D5D043AB-8106-445A-94E4-1F2D6C117A81}.Debug|x64.ActiveCfg = Windows Debug|x64
 		{D5D043AB-8106-445A-94E4-1F2D6C117A81}.Debug|x86.ActiveCfg = Windows Debug|Win32
