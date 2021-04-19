@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sagebox Quick C++ - Console Mode (and Windows)", "Sagebox Quick C++ - Console Mode (and Windows).vcxproj", "{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Optimized|x64 = Debug Optimized|x64
+		Debug Optimized|x86 = Debug Optimized|x86
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Windows Debug Optimized|x64 = Windows Debug Optimized|x64
+		Windows Debug Optimized|x86 = Windows Debug Optimized|x86
+		Windows Debug|x64 = Windows Debug|x64
+		Windows Debug|x86 = Windows Debug|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug Optimized|x64.ActiveCfg = Debug Optimized|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug Optimized|x64.Build.0 = Debug Optimized|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug Optimized|x86.ActiveCfg = Debug Optimized|Win32
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug Optimized|x86.Build.0 = Debug Optimized|Win32
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug|x64.ActiveCfg = Debug|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug|x64.Build.0 = Debug|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug|x86.ActiveCfg = Debug|Win32
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Debug|x86.Build.0 = Debug|Win32
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug Optimized|x64.ActiveCfg = Windows Debug Optimized|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug Optimized|x64.Build.0 = Windows Debug Optimized|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug Optimized|x86.ActiveCfg = Windows Debug Optimized|Win32
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug Optimized|x86.Build.0 = Windows Debug Optimized|Win32
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug|x64.ActiveCfg = Windows Debug|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug|x64.Build.0 = Windows Debug|x64
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug|x86.ActiveCfg = Windows Debug|Win32
+		{0B9D6778-AD7C-4F61-9E4F-F4A37DA59E7B}.Windows Debug|x86.Build.0 = Windows Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {617CF22F-7880-4D88-B4DD-715040C56D95}
+	EndGlobalSection
+EndGlobal

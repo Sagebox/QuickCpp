@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Interactive Mandelbrot", "Interactive Mandelbrot\Interactive Mandelbrot.vcxproj", "{BE6957D4-C64C-4A53-AA88-52D81009A0FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Optimized|x64 = Debug Optimized|x64
+		Debug Optimized|x86 = Debug Optimized|x86
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Windows Debug Optimized|x64 = Windows Debug Optimized|x64
+		Windows Debug Optimized|x86 = Windows Debug Optimized|x86
+		Windows Debug|x64 = Windows Debug|x64
+		Windows Debug|x86 = Windows Debug|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug Optimized|x64.ActiveCfg = Debug Optimized|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug Optimized|x64.Build.0 = Debug Optimized|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug Optimized|x86.ActiveCfg = Debug Optimized|Win32
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug Optimized|x86.Build.0 = Debug Optimized|Win32
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug|x64.ActiveCfg = Debug|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug|x64.Build.0 = Debug|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug|x86.ActiveCfg = Debug|Win32
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Debug|x86.Build.0 = Debug|Win32
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug Optimized|x64.ActiveCfg = Windows Debug Optimized|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug Optimized|x64.Build.0 = Windows Debug Optimized|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug Optimized|x86.ActiveCfg = Windows Debug Optimized|Win32
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug Optimized|x86.Build.0 = Windows Debug Optimized|Win32
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug|x64.ActiveCfg = Windows Debug|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug|x64.Build.0 = Windows Debug|x64
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug|x86.ActiveCfg = Windows Debug|Win32
+		{BE6957D4-C64C-4A53-AA88-52D81009A0FB}.Windows Debug|x86.Build.0 = Windows Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F678B62-3133-46C0-A1DD-4E458826E979}
+	EndGlobalSection
+EndGlobal

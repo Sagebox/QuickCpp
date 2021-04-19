@@ -1,0 +1,39 @@
+------------------------------
+Quick Description of Templates
+------------------------------
+
+The Main template to use is "Console Mode (and Windows)", which provides Console Mode and Pure Windows templates for 
+using Sagebox.   The Windows version is a project setting that also links with WinMain.lib() so that WinMain() calls your
+main(). 
+
+--> Console Mode (and Windows)
+
+Creates a standard C++ Console Mode (or Windows C++) starting at main().  The template adds code to start the
+Sagebox Quick C++ environment, and adds code to print out Hello World and a circle on the Sagebox Window. 
+
+This template has a "Windows" project setting, turning the program into a Pure Windows program.  It links
+with WinMain.lib to transfer control from WinMain() to main(). 
+
+This allows the program to switch back-and-forth between a Console Mode program and Windows program with
+no code changes.
+
+--> Windows
+
+This is a Windows version of the Sagebox Quick C++ template starting at WinMain().  It prints "Hello World"
+messages to the window and draws a circle. 
+
+It also adds an ExitButton() at the end, since it is a Windows program with no console mode.
+
+
+--> Sandbox 
+
+The Sandbox Template is a Pure Windows program that automatically creates the Sagebox Quick C++ environment. 
+
+The program starts at main(), printing out "Hello World" messages and draws a circle.
+
+This program does not start Sagebox Quick C++ or have any exit code.  This is done automatically. 
+
+As a Sandbox version, it also creates the Process Control Window as visible and turns on Control-C to exit the
+program easily. 
+
+Read the "readme.rtf" file in the directory for more information.

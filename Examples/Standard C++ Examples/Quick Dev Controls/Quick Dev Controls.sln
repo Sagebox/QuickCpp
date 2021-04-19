@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Windows Version", "Windows Version\Windows Version.vcxproj", "{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Console Version", "Console Version\Console Version.vcxproj", "{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Optimized|x64 = Debug Optimized|x64
+		Debug Optimized|x86 = Debug Optimized|x86
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Windows Debug Optimized|x64 = Windows Debug Optimized|x64
+		Windows Debug Optimized|x86 = Windows Debug Optimized|x86
+		Windows Debug|x64 = Windows Debug|x64
+		Windows Debug|x86 = Windows Debug|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Debug Optimized|x64.ActiveCfg = Debug Optimized|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Debug Optimized|x64.Build.0 = Debug Optimized|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Debug Optimized|x86.ActiveCfg = Debug Optimized|Win32
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Debug Optimized|x86.Build.0 = Debug Optimized|Win32
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Debug|x64.ActiveCfg = Debug|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Debug|x64.Build.0 = Debug|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Debug|x86.ActiveCfg = Windows Debug|Win32
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug Optimized|x64.ActiveCfg = Windows Debug Optimized|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug Optimized|x64.Build.0 = Windows Debug Optimized|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug Optimized|x86.ActiveCfg = Windows Debug Optimized|Win32
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug Optimized|x86.Build.0 = Windows Debug Optimized|Win32
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug|x64.ActiveCfg = Windows Debug|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug|x64.Build.0 = Windows Debug|x64
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug|x86.ActiveCfg = Windows Debug|Win32
+		{BA45D4F5-4BA3-4270-9228-28CDEFFAE85F}.Windows Debug|x86.Build.0 = Windows Debug|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug Optimized|x64.ActiveCfg = Debug Optimized|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug Optimized|x64.Build.0 = Debug Optimized|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug Optimized|x86.ActiveCfg = Debug Optimized|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug Optimized|x86.Build.0 = Debug Optimized|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug|x64.ActiveCfg = Debug|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug|x64.Build.0 = Debug|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug|x86.ActiveCfg = Debug|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Debug|x86.Build.0 = Debug|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug Optimized|x64.ActiveCfg = Windows Debug Optimized|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug Optimized|x64.Build.0 = Windows Debug Optimized|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug Optimized|x86.ActiveCfg = Windows Debug Optimized|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug Optimized|x86.Build.0 = Windows Debug Optimized|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug|x64.ActiveCfg = Windows Debug|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug|x64.Build.0 = Windows Debug|x64
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug|x86.ActiveCfg = Windows Debug|Win32
+		{D2B520A9-77FD-4D37-9962-B298D5AF3FCF}.Windows Debug|x86.Build.0 = Windows Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B46BDA37-9296-494C-835F-172D1E6754AB}
+	EndGlobalSection
+EndGlobal
