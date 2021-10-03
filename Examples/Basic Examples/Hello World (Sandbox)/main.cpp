@@ -58,7 +58,7 @@ int main()
     // Draw a red circle to show how we can do it.  Instead of GetColor("Red)", rgb value
     // {255,0,0}, a Windows COLORREF, or RgbColor type value may also be used. 
 
-    win.DrawCircle(300,250,100,win.GetColor("red"));  
+    win.DrawCircle(300,250,100,SageColor::Red);  
 
     // We don't need to pause the program, as the Sandbox will put up an exit button (unless win.NoExitMsg() is called first)
 }

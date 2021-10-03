@@ -49,8 +49,6 @@
 
 int main()
 {
-    CreateQuickCpp();
- 
     // Bring up the LCD Widget.  Since we're using the global Sagebox Quick C++ window "win.", we need it's CWindow object pointer.  
     // win.GetWindow() returns the pointer.  With Sage::CWindow objects, you can just use "&cWin" to send the pointer. 
     //

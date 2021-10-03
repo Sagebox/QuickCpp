@@ -46,8 +46,6 @@
 #include "CColorSelector.h"
 int main()
 {
-    CreateQuickCpp();
-
     // Set a specific window size and location for the window, so we can place the Color Selector to the right.
     // We could just place the Color Selector randomly, or as an alternative, we could call win.GetWindowSize() 
     // and win.GetWinLocation() to determine where to put the Color Selector.  

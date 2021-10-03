@@ -42,8 +42,8 @@
 
 int main()
 {   
-    RgbColor rgbColor = { 255,0,0 };  // We could use win.GetColor("Red'); 
-                                      // We can also use a standard Windows COLORREF RGB(255,0,0); 
+   RgbColor rgbColor = SageColor::Red;  // We could use {255,0,0}
+                                        // We can also use a standard Windows COLORREF RGB(255,0,0); 
 
     int iRadius1 = 0,iRadius2 = 0;
 

@@ -1203,6 +1203,18 @@ namespace Sandbox
     //
     bool DrawPolygon(POINT * pPoints,int iVertices,int iColor1,int iColor2 = -1);
 
+    //-->  Original Prototype: bool DrawPolygon(POINT * pPoints,int iVertices,RGBColor_t rgbColor = Rgb::Default,RGBColor_t rgbColorOut = Rgb::Undefined);
+
+    bool DrawPolygon(POINT * pPoints,int iVertices,RGBColor_t rgbColor = Rgb::Default,RGBColor_t rgbColorOut = Rgb::Undefined);
+
+    //-->  Original Prototype: bool DrawOpenPolygon(POINT * pPoints,int iVertices,int iColor1,int iPenSize = 0);
+
+    bool DrawOpenPolygon(POINT * pPoints,int iVertices,int iColor1,int iPenSize = 0);
+
+    //-->  Original Prototype: bool DrawOpenPolygon(POINT * pPoints,int iVertices,RGBColor_t rgbColor = Rgb::Default,int iPenSize = 0);
+
+    bool DrawOpenPolygon(POINT * pPoints,int iVertices,RGBColor_t rgbColor = Rgb::Default,int iPenSize = 0);
+
     //-->  Original Prototype: bool DrawCircle(int iX,int iY,int iRadius,int iColor1,int iColor2 = -1);
 
     // Draw a Circle on the Window
@@ -2671,6 +2683,25 @@ namespace Sandbox
     //
     bool DisplayBitmap(int iX,int iY,RawBitmap_t & stBitmap);
 
+    //-->  Original Prototype: bool DisplayBitmap(POINT pLoc,RawBitmap_t & stBitmap);
+
+    // Display a Bitmap on the window.
+    // 
+    // ** Note: ** -- this displayed aligned bitmaps, where each row must be divisible by 4, in which 
+    // case some rows must be padded. 
+    //
+    // DisplayBitmap() shows a bitmap on the window at the specified (iX,iY) coordinates on the screen.
+    // Raw data can be used, in which case the width, height, and memory pointer must also be supplied.
+    // RawBitmap_t and CBitmap can also be used, in which case only the iX, and iY parameters are necessary.
+    //
+    // Note: Negate the height to display the bitmap upside-down.  In the case of RawBitmap_t or CBitmap, put
+    // a '-' sign in front of the bitmap structure.  DisplayBitmapR() can also be used.
+    //
+    // In the case of RawBitmap_t and CBitmap, bad or corrupted bitmaps are not displayed and passed through with 
+    // a false return. 
+    //
+    bool DisplayBitmap(POINT pLoc,RawBitmap_t & stBitmap);
+
     //-->  Original Prototype: bool DisplayBitmap(RawBitmap_t & stBitmap);
 
     // Display a Bitmap on the window.
@@ -2754,6 +2785,45 @@ namespace Sandbox
     // See DisplayBitmap() for more details on this function.
     //
     bool DisplayBitmapR(RawBitmap_t & stBitmap);
+
+    //-->  Original Prototype: bool DisplayBitmapR(int iX,int iY,RawBitmap32_t & stBitmap);
+
+    // Display a bitmap upside-down.  This is often useful for bitmaps, as they are typically stored upside-down, and default
+    // Windows behavior is to correct this.
+    //
+    // However, it is common to work with correct bitmaps that will then display upside down. 
+    // DisplayBitmapR() will display a bitmap right-side up.  You can also negate the height or 
+    // struture (by putting a '-' in front of it) to use the regular DisplayBitmap()
+    //
+    // See DisplayBitmap() for more details on this function.
+    //
+    bool DisplayBitmapR(int iX,int iY,RawBitmap32_t & stBitmap);
+
+    //-->  Original Prototype: bool DisplayBitmapR(POINT pLoc,RawBitmap32_t & stBitmap);
+
+    // Display a bitmap upside-down.  This is often useful for bitmaps, as they are typically stored upside-down, and default
+    // Windows behavior is to correct this.
+    //
+    // However, it is common to work with correct bitmaps that will then display upside down. 
+    // DisplayBitmapR() will display a bitmap right-side up.  You can also negate the height or 
+    // struture (by putting a '-' in front of it) to use the regular DisplayBitmap()
+    //
+    // See DisplayBitmap() for more details on this function.
+    //
+    bool DisplayBitmapR(POINT pLoc,RawBitmap32_t & stBitmap);
+
+    //-->  Original Prototype: bool DisplayBitmapR(RawBitmap32_t & stBitmap);
+
+    // Display a bitmap upside-down.  This is often useful for bitmaps, as they are typically stored upside-down, and default
+    // Windows behavior is to correct this.
+    //
+    // However, it is common to work with correct bitmaps that will then display upside down. 
+    // DisplayBitmapR() will display a bitmap right-side up.  You can also negate the height or 
+    // struture (by putting a '-' in front of it) to use the regular DisplayBitmap()
+    //
+    // See DisplayBitmap() for more details on this function.
+    //
+    bool DisplayBitmapR(RawBitmap32_t & stBitmap);
 
     //-->  Original Prototype: bool DisplayBitmap32(int iX,int iY,int iWidth,int iHeight,unsigned char * sMemory);
 
@@ -2844,6 +2914,34 @@ namespace Sandbox
     //
     bool BlendBitmap(POINT pLoc,RawBitmap_t & stBitmap,RawBitmap_t & stMask);
 
+    //-->  Original Prototype: bool BlendBitmapEx(Sage::RawBitmap32_t & stSource,POINT pDest,SIZE szDest);
+
+    // Deprecated -- Use BlendBitmap32()
+    //
+    bool BlendBitmapEx(Sage::RawBitmap32_t & stSource,POINT pDest,SIZE szDest);
+
+    //-->  Original Prototype: bool BlendBitmapREx(Sage::RawBitmap32_t & stSource,POINT pDest,SIZE szDest);
+
+    // Deprecated -- Use BlendBitmapREx()
+    //
+    bool BlendBitmapREx(Sage::RawBitmap32_t & stSource,POINT pDest,SIZE szDest);
+
+    //-->  Original Prototype: bool BlendBitmap32(Sage::RawBitmap32_t & stSource,const POINT pDest,const SIZE szDest = {});
+
+    bool BlendBitmap32(Sage::RawBitmap32_t & stSource,const POINT pDest,const SIZE szDest = {});
+
+    //-->  Original Prototype: bool BlendBitmap32(const unsigned char * sBitmap,const SIZE szSize,const POINT pDest,const SIZE szDest = {});
+
+    bool BlendBitmap32(const unsigned char * sBitmap,const SIZE szSize,const POINT pDest,const SIZE szDest = {});
+
+    //-->  Original Prototype: bool BlendBitmap32R(Sage::RawBitmap32_t & stSource,const POINT pDest,const SIZE szDest = {});
+
+    bool BlendBitmap32R(Sage::RawBitmap32_t & stSource,const POINT pDest,const SIZE szDest = {});
+
+    //-->  Original Prototype: bool BlendBitmap32R(const unsigned char * sBitmap,const SIZE szSize, const POINT pDest,const SIZE szDest = {});
+
+    bool BlendBitmap32R(const unsigned char * sBitmap,const SIZE szSize,const POINT pDest,const SIZE szDest = {});
+
     //-->  Original Prototype: bool StretchBitmap(unsigned char * sMemory,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource,SIZE szSourceBitmap = {0,0});
 
     // StretchBitmap() -- Display a stretched bitmap to the window.  
@@ -2876,6 +2974,46 @@ namespace Sandbox
     //-->  Original Prototype: bool StretchBitmapR(CBitmap & cBitmap,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource);
 
     bool StretchBitmapR(CBitmap & cBitmap,POINT pDest,SIZE szDest,POINT pSrc,SIZE szSource);
+
+    //-->  Original Prototype: bool StretchBitmap32(unsigned char * sMemory,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource,SIZE szSourceBitmap = {0,0});
+
+    bool StretchBitmap32(unsigned char * sMemory,POINT pDest,SIZE szDest,POINT pSrc,SIZE szSource,SIZE szSourceBitmap = {0,0});
+
+    //-->  Original Prototype: bool StretchBitmap32(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    bool StretchBitmap32(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    //-->  Original Prototype: bool StretchBitmap32(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource);
+
+    bool StretchBitmap32(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc,SIZE szSource);
+
+    //-->  Original Prototype: bool StretchBitmap32R(unsigned char * sMemory,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource,SIZE szSourceBitmap = {0,0});
+
+    bool StretchBitmap32R(unsigned char * sMemory,POINT pDest,SIZE szDest,POINT pSrc,SIZE szSource,SIZE szSourceBitmap = {0,0});
+
+    //-->  Original Prototype: bool StretchBitmap32R(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    bool StretchBitmap32R(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    //-->  Original Prototype: bool StretchBitmap32R(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource);
+
+    bool StretchBitmap32R(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc,SIZE szSource);
+
+    //-->  Original Prototype: bool StretchBitmap(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    bool StretchBitmap(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    //-->  Original Prototype: bool StretchBitmap(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource);
+
+    bool StretchBitmap(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc,SIZE szSource);
+
+    //-->  Original Prototype: bool StretchBitmapR(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    bool StretchBitmapR(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest);
+
+    //-->  Original Prototype: bool StretchBitmapR(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc, SIZE szSource);
+
+    bool StretchBitmapR(RawBitmap32_t & cBitmap,POINT pDest,SIZE szDest,POINT pSrc,SIZE szSource);
 
     //-->  Original Prototype: bool DisplayBitmapEx(unsigned char * sMemory,POINT pDest,POINT pSrc, SIZE szSize,SIZE szSourceBitmap);
 
@@ -3326,6 +3464,10 @@ namespace Sandbox
 
     bool isMouseDragging(POINT & pStartDrag);
 
+    //-->  Original Prototype: bool StartMouseDrag(POINT pPoint);
+
+    bool StartMouseDrag(POINT pPoint);
+
     //-->  Original Prototype: POINT GetMouseDragStart();
 
     POINT GetMouseDragStart();
@@ -3633,6 +3775,16 @@ namespace Sandbox
     // See GetCurDC() for more information
     //
     HDC GetBitmapDC();
+
+    //-->  Original Prototype: HBITMAP GetBitmapHandle();
+
+    /// <summary>
+    /// Returns the Windows Bitmap handle for the Bitmap currently selected in the window client area.
+    /// <para></para>
+    /// Also See: GetBitmapDC();
+    /// </summary>
+    /// <returns></returns>
+    HBITMAP GetBitmapHandle();
 
     //-->  Original Prototype: POINT GetWritePos();
 
@@ -5144,7 +5296,7 @@ namespace Sandbox
     //
     bool CreateCheckboxStyle(const char * sStyleName,GraphicCheckboxStyle & stStyle);
 
-    //-->  Original Prototype: bool CaptureMouse(bool bReleaseOnMouseUp = false);
+    //-->  Original Prototype: bool CaptureMouse(bool bReleaseOnMouseUp = true);
 
     // CaptureMouse -- Keeps the mouse and keyboard entry tied to the window until the capture is release or
     // changed by Windows.
@@ -5166,7 +5318,7 @@ namespace Sandbox
     // catch the OnCaptureChange() Message (which is only called when the capture is released) to 
     // monitor the capture status
     //
-    bool CaptureMouse(bool bReleaseOnMouseUp = false);
+    bool CaptureMouse(bool bReleaseOnMouseUp = true);
 
     //-->  Original Prototype: bool ReleaseCapture();
 
@@ -5592,7 +5744,72 @@ namespace Sandbox
 
     //-->  Original Prototype: CBitmap ReadImageFile(const char * sPath,bool * bSuccess = nullptr);
 
+    /// <summary>
+    /// Reads an image file and returns a CBitmap.  If the Bitmap is not valid, then there was an error. 
+    /// <para></para>
+    /// Use GetLastImageStatus() to determine error type.
+    /// <para></para>
+    /// --> Image Types Supported: BMP, Jpeg, and PNG.
+    /// </summary>
+    /// <param name="sPath">Path fo File </param>
+    /// <param name="bSuccess">(optional) filled with true/false if image was read successfully.</param>
+    /// <returns></returns>
     CBitmap ReadImageFile(const char * sPath,bool * bSuccess = nullptr);
+
+    //-->  Original Prototype: [[nodiscard]] RawBitmap32_t ReadImageFile32(const char * sPath,bool * bSuccess = nullptr);
+
+    [[nodiscard]] RawBitmap32_t ReadImageFile32(const char * sPath,bool * bSuccess = nullptr);
+
+    //-->  Original Prototype: CBitmap ReadImageMem(const unsigned char * sMem,size_t tMemLength,bool * bSuccess = nullptr);
+
+    /// <summary>
+    /// Reads an image in memory and returns a CBitmap.  If the Bitmap is not valid, then there was an error. 
+    /// <para></para>
+    /// Use GetLastImageStatus() to determine error type.
+    /// <para></para>
+    /// Memory and Memory Size, Vector, or Mem classes may be used instead.  See function prototypes. 
+    /// <para></para>
+    /// --> Image Types Supported: BMP, Jpeg, and PNG.
+    /// </summary>
+    /// <param name="sMem">Start of Image Memory</param>
+    /// <param name="tMemLength">Length of Memory</param>
+    /// <param name="bSuccess">(optional) filled with true/false if image was read successfully.</param>
+    /// <returns></returns>
+    CBitmap ReadImageMem(const unsigned char * sMem,size_t tMemLength,bool * bSuccess = nullptr);
+
+    //-->  Original Prototype: CBitmap ReadImageMem(Mem<unsigned char> & cMem,bool * bSuccess = nullptr);
+
+    /// <summary>
+    /// Reads an image in memory and returns a CBitmap.  If the Bitmap is not valid, then there was an error. 
+    /// <para></para>
+    /// Use GetLastImageStatus() to determine error type.
+    /// <para></para>
+    /// Memory and Memory Size, Vector, or Mem classes may be used instead.  See function prototypes. 
+    /// <para></para>
+    /// --> Image Types Supported: BMP, Jpeg, and PNG.
+    /// </summary>
+    /// <param name="sMem">Start of Image Memory</param>
+    /// <param name="tMemLength">Length of Memory</param>
+    /// <param name="bSuccess">(optional) filled with true/false if image was read successfully.</param>
+    /// <returns></returns>
+    CBitmap ReadImageMem(Mem<unsigned char> & cMem,bool * bSuccess = nullptr);
+
+    //-->  Original Prototype: CBitmap ReadImageMem(std::vector<unsigned char> & vMem,bool * bSuccess = nullptr);
+
+    /// <summary>
+    /// Reads an image in memory and returns a CBitmap.  If the Bitmap is not valid, then there was an error. 
+    /// <para></para>
+    /// Use GetLastImageStatus() to determine error type.
+    /// <para></para>
+    /// Memory and Memory Size, Vector, or Mem classes may be used instead.  See function prototypes. 
+    /// <para></para>
+    /// --> Image Types Supported: BMP, Jpeg, and PNG.
+    /// </summary>
+    /// <param name="sMem">Start of Image Memory</param>
+    /// <param name="tMemLength">Length of Memory</param>
+    /// <param name="bSuccess">(optional) filled with true/false if image was read successfully.</param>
+    /// <returns></returns>
+    CBitmap ReadImageMem(std::vector<unsigned char> & vMem,bool * bSuccess = nullptr);
 
     //-->  Original Prototype: ImageStatus GetLastImageStatus();
 
@@ -5726,6 +5943,10 @@ namespace Sandbox
     //
     CListBox & NewListBox(int ix,int iy,int iWidth,int iHeight,const cwfOpt & cwOpt = cwfOpt());
 
+    //-->  Original Prototype: CListBox & NewListBox(int ix,int iy,int iWidth,int iHeight,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
+
+    CListBox & NewListBox(int ix,int iy,int iWidth,int iHeight,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
+
     //-->  Original Prototype: CListBox & NewListBox(CListBox * cListBox,int ix,int iy,int iWidth,int iHeight,const cwfOpt & cwOpt = cwfOpt());
 
     // NewListBox() -- Create a listbox in the window. 
@@ -5749,13 +5970,25 @@ namespace Sandbox
     //
     CListBox & NewListBox(CListBox * cListBox,int ix,int iy,int iWidth,int iHeight,const cwfOpt & cwOpt = cwfOpt());
 
-    //-->  Original Prototype: CComboBox &  NewComboBox(int iX,int iY,int iWidth,int iHeight,const cwfOpt & cwOpt = cwfOpt());
+    //-->  Original Prototype: CListBox & NewListBox(CListBox * cListBox,int ix,int iy,int iWidth,int iHeight,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
 
-    CComboBox & NewComboBox(int iX,int iY,int iWidth,int iHeight,const cwfOpt & cwOpt = cwfOpt());
+    CListBox & NewListBox(CListBox * cListBox,int ix,int iy,int iWidth,int iHeight,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
 
-    //-->  Original Prototype: CComboBox &  NewComboBox(CComboBox * cComboBox,int iX,int iY,int iWidth,int iHeight,const cwfOpt & cwOpt = cwfOpt());
+    //-->  Original Prototype: CComboBox &  NewComboBox(int iX,int iY,int iWidth,const cwfOpt & cwOpt = cwfOpt());
 
-    CComboBox & NewComboBox(CComboBox * cComboBox,int iX,int iY,int iWidth,int iHeight,const cwfOpt & cwOpt = cwfOpt());
+    CComboBox & NewComboBox(int iX,int iY,int iWidth,const cwfOpt & cwOpt = cwfOpt());
+
+    //-->  Original Prototype: CComboBox &  NewComboBox(int iX,int iY,int iWidth,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
+
+    CComboBox & NewComboBox(int iX,int iY,int iWidth,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
+
+    //-->  Original Prototype: CComboBox &  NewComboBox(CComboBox * cComboBox,int iX,int iY,int iWidth,const cwfOpt & cwOpt = cwfOpt());
+
+    CComboBox & NewComboBox(CComboBox * cComboBox,int iX,int iY,int iWidth,const cwfOpt & cwOpt = cwfOpt());
+
+    //-->  Original Prototype: CComboBox &  NewComboBox(CComboBox * cComboBox,int iX,int iY,int iWidth,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
+
+    CComboBox & NewComboBox(CComboBox * cComboBox,int iX,int iY,int iWidth,const char * sItemList,const cwfOpt & cwOpt = cwfOpt());
 
     //-->  Original Prototype: bool SetEventWindow(CWindow * cWin = nullptr);
 
@@ -5985,6 +6218,10 @@ namespace Sandbox
     //-->  Original Prototype: CComboBox & DevComboBox(const char * sComboBoxName,const cwfOpt & cwOpt = cwfOpt());
 
     CComboBox & DevComboBox(const char * sComboBoxName,const cwfOpt & cwOpt = cwfOpt());
+
+    //-->  Original Prototype: CComboBox & DevComboBox(const cwfOpt & cwOpt = cwfOpt());
+
+    CComboBox & DevComboBox(const cwfOpt & cwOpt = cwfOpt());
 
     //-->  Original Prototype: CWindow & DevWindow(const char * sTitle,int iNumlines,const cwfOpt & cwOpt = cwfOpt());
 
@@ -6361,6 +6598,139 @@ namespace Sandbox
     /// </summary>
     /// <returns></returns>
     bool is64BitWindows();
+
+    //-->  Original Prototype: bool InitGdiPlus();
+
+    /// <summary>
+    /// Initializes Windows GDI+. This only needs to be called once and is initialized for the entire application.  InitGdiPlus() does not need to be called
+    /// for every Window, and is provided in the CWindow class for ease-of-use.
+    /// <para></para>&#160;&#160;&#160;
+    /// --> Note:  For individual windows, you can call CWindow::CreateGdiObject(), which will return a GDI Graphics object for the current window.  This will also 
+    /// <para></para>&#160;&#160;&#160;
+    /// --> call InitGdiPlus() automatically, eliminating the need to call InitGdiPlus()
+    /// See CreateGDIObject() for more information.             
+    /// </summary>
+    /// <returns></returns>
+    bool InitGdiPlus();
+
+    //-->  Original Prototype: Gdiplus::Graphics & GetGdiGraphics();
+
+    Gdiplus::Graphics & GetGdiGraphics();
+
+    //-->  Original Prototype: bool VsyncWait();
+
+    /// <summary>
+    /// Waits for the monitor VSync blank time to start before returning.  This will sync your graphics with the graphic output to the monitor. 
+    /// <para></para>
+    /// --> Note: DirectDraw() must be available on your system and initialize correctly.  Otherwise, VsyncWait() will return immediately.
+    /// <para></para>
+    /// --> Use VsyncIsValid() to check for initialization status (a return of TRUE indicates the VsyncWait() is working correctly)
+    /// <para></para>
+    /// --> Important Note: VsyncReady() and VsyncWait() are mutually exclusive. Using them together will cause performance issues. 
+    /// </summary>
+    /// <returns></returns>
+    bool VsyncWait();
+
+    //-->  Original Prototype: bool VsyncIsValid();
+
+    /// <summary>
+    /// Returns TRUE if the VsyncWait and VsyncThread capabilities are accurate (i.e. if DirectDraw() was initialized and can look for the Vertical ReSync)
+    /// <para></para>&#160;&#160;&#160;
+    /// --> Note this will initialize DirectDraw() and put the application in a performance mode, using more processing time (i.e. it assumes you are using graphics by checking its status)
+    /// <para></para>
+    /// Use this as a DEBUG function to check the validity of Vsync operations (once true, then there is no need to check)
+    /// </summary>
+    /// <returns></returns>
+    bool VsyncIsValid();
+
+    //-->  Original Prototype: bool VsyncReady(Peek peek = Peek::No);
+
+    /// <summary>
+    /// Returns true if a Vsync blank period has started, setting the status on the Vertical Retrace of your monitor
+    /// <para></para>&#160;&#160;&#160;
+    /// --> Note: This will start a passive thread to monitor the Vsync state (see: VsyncStartThread()), which will then send an event to your window, causing
+    /// VsyncReady() to return true.
+    /// <para></para>
+    /// VSyncReady() is an event, and therefore will return TRUE only once until the Vsync is signaled again, unless Peek::Yes is used to intentially not reset it.
+    /// <para></para>
+    /// --> Important Note: VsyncReady() and VsyncWait() are mutually exclusive. Using them together will cause performance issues. 
+    /// <para></para>
+    /// --> Note: Only one window can use the Vsync Thread at a time.  Using the thread in another window will cause the thread to be reset to that window.
+    /// </summary>
+    /// <param name="peek">Does not change the event status if Peek == Peek::Yes</param>
+    /// <returns></returns>
+    bool VsyncReady(Peek peek = Peek::No);
+
+    //-->  Original Prototype: bool VsyncStartThread();
+
+    /// <summary>
+    /// Starts the main Vsync thread to send a VsyncReady() event to your window with the Vertical Retrace occurs on your monitor. 
+    /// <para></para>
+    /// Using VsyncReady() starts the thread automatically.  VsyncStartThread() can be used as a pre-step to make sure the thread is operating
+    /// and valid (see VsyncIsValid()) before entering the main loop, saving an initial burst of processing time on the first VsyncReady() call. 
+    /// <para></para>
+    /// --> The Vsync Thread is a passive thread that sleeps until the Vertical Retrace occurs, and takes little processing time. 
+    /// <para></para>
+    /// --> Note: Only one window can use the Vsync Thread at a time.  Using the thread in another window will cause the thread to be reset to that window.
+    /// <para></para>
+    /// --> Note: All Vsync functions assume graphics processing and put your application in a performance mode, using more CPU time, but will
+    /// not cause your system to become sluggish unless you manually set your application to a Realtime or High-priority mode.
+    /// </summary>
+    /// <returns></returns>
+    bool VsyncStartThread();
+
+    //-->  Original Prototype: bool VsyncEndThread();
+
+    /// <summary>
+    /// Ends the Vsync Retrace Thread.  Use this when finished with your graphics loop using the vertical retrace. 
+    /// <para></para>
+    /// --> The VSync Thread is passive and is ok to leave running, as it will not take up too much processing time. 
+    /// </summary>
+    /// <returns></returns>
+    bool VsyncEndThread();
+
+    //-->  Original Prototype: bool SelectNewBitmap(HBITMAP hBitmap);
+
+    /// <summary>
+    /// Selects a new Windows Bitmap into the device context. This does not delete the original bitmap, which is still available for re-selection with a null parameter.
+    /// <para></para>&#160;&#160;&#160;
+    /// --> Note: Once a new bitmap is selected, the bitmap will not be automatically resized when window sizes change.  The bitmap can be sized to the maximum possible
+    /// window size, or can be re-allocated on WM_SIZE messages from Windows by trapping these messages with a Window Handler (i.e. CWindowHandler).
+    /// <para></para>
+    /// Use SelectNewBitmap() with a nullptr or SelectOriginalBitmap() to revert back to the original bitmap created by Sagebox when the window was created. 
+    /// <para></para>
+    /// </summary>
+    /// <param name="hBitmap">Windows HANDLE to the bitmap</param>
+    /// <returns></returns>
+    bool SelectNewBitmap(HBITMAP hBitmap);
+
+    //-->  Original Prototype: bool SelectOriginalBitmap();
+
+    bool SelectOriginalBitmap();
+
+    //-->  Original Prototype: std::tuple<HBITMAP,unsigned char *> CreateDIBitmap32(bool bUpsideDown);
+
+    std::tuple<HBITMAP,unsigned char *> CreateDIBitmap32(bool bUpsideDown);
+
+    //-->  Original Prototype: std::tuple<HBITMAP,unsigned char *> CreateDIBitmap32(SIZE szSize = {},bool bUpsideDown = false);
+
+    std::tuple<HBITMAP,unsigned char *> CreateDIBitmap32(SIZE szSize = {},bool bUpsideDown = false);
+
+    //-->  Original Prototype: std::tuple<HBITMAP,unsigned char *> CreateDIBitmap32(int iWidth,int iHeight,bool bUpsideDown = false);
+
+    std::tuple<HBITMAP,unsigned char *> CreateDIBitmap32(int iWidth,int iHeight,bool bUpsideDown = false);
+
+    //-->  Original Prototype: bool SetDirtyFlag(bool bDirty = true);
+
+    bool SetDirtyFlag(bool bDirty = true);
+
+    //-->  Original Prototype: __forceinline unsigned char * GetLastKnownDIBMem()    { return m_sLastKnownDIBMem;
+
+    unsigned char * GetLastKnownDIBMem();
+
+    //-->  Original Prototype: __forceinline SIZE GetLastKnownDIBSize()    { return m_szLastKnownDIBSize;
+
+    SIZE GetLastKnownDIBSize();
 
     // -------------------------------------------------------------------------
     // $Automated_End(CScript.h)  -- Automated Interface for Quick CPP functions

@@ -30,7 +30,7 @@ int main()
 {
     // Cycle through colors for each time the mouse is lifted and then pressed again.
 
-    const char * sColors[6] = { "White","Red","Green","Cyan","LightPurple","Yellow" };
+    RgbColor rgbColors[6] = { SageColor::White, SageColor::Red, SageColor::Green, SageColor::Cyan, SageColor::LightPurple, SageColor::Yellow };
     
     int iColorIndex     = 0;    // Initial Color Index
     int iPenThickness   = 4;    // Initial Pen Thickness
@@ -39,7 +39,7 @@ int main()
 
     win.SetPenThickness(iPenThickness);    // Set the initial pen thickness. 
 
-    win.Cls("black","darkblue");            // Clear the screen with a gradient 
+    win.Cls(SageColor::Black,SageColor::DarkBlue);            // Clear the screen with a gradient 
 
     // Create a text Widget to display information and the pen thickness.
     //
@@ -54,7 +54,7 @@ int main()
 
     // The Text Widget allows us to clear the screen without losing the text or worrying about how to update it. 
 
-    auto& cText = win.TextWidget(0,0,win.GetWindowSize().cx,0,TextCenterX() | Font("Arial,16") | TextColor("Cyan") | Transparent());
+    auto& cText = win.TextWidget(0,0,win.GetWindowSize().cx,0,TextCenterX() | Font("Arial,16") | TextColor(SageColor::Cyan) | Transparent());
 
     // A lambda function to show the banner, since we display it in two places (initially and when we change the pen thickness).
 
@@ -72,7 +72,7 @@ int main()
         // If the mouse is clicked, consider this the starting point for the mouse, since it was previously not pressed.
 
         if (win.MouseClicked(pLastMouse))
-            rgbCurColor = win.GetColor(sColors[iColorIndex++ % 6]);    // Get the next color in the index
+            rgbCurColor = rgbColors[iColorIndex++ % 6];    // Get the next color in the index
                                                                         // new mousemovment, we can draw a line.
 
         if (win.MouseRButtonClicked()) win.Cls();                     // If the Right Mouse Buttton was clicked, clear the screen

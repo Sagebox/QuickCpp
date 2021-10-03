@@ -375,7 +375,7 @@ bool CVisualSort::InitWindow(CWindow * cWindow)
 
     m_cGraphWin->SetClsBitmap(m_cWin->ReadPgrBitmap("Texture2",sSortTexture));    // Set the texture for the Graph Window.  Remove line to remove the texture.
 
-    m_cGraphWin->Cls("black");    // Clear the screen to black so we can use this if we don't use the texture. 
+    m_cGraphWin->Cls(SageColor::Black);    // Clear the screen to black so we can use this if we don't use the texture. 
 
     // Write some text explaining the threshold slider.  "{cyan}" is used twice because the color, when set, is active until the end of the line, 
     // so the next line needs to specify the color again.

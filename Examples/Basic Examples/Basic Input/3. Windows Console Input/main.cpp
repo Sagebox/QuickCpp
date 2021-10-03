@@ -51,8 +51,8 @@
 
 int main()
 {   
-    RgbColor rgbColor = { 255,0,0 };  // Or we could use win.GetColor("Red'); 
-                                      // We can also use a standard Windows COLORREF RGB(255,0,0); 
+    RgbColor rgbColor = SageColor::Red;  // We could use {255,0,0}
+                                         // We can also use a standard Windows COLORREF RGB(255,0,0); 
 
     int iRadius1 = 0,iRadius2 = 0;  // We don't need to set them to 0, since we get a guaranteed numeric result. 
                                     // (which is 0 when the number is invalid, such as non-numeric entry)

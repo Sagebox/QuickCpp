@@ -30,22 +30,14 @@
 #include "CQuickCpp.h"
 
 int main()
-{
-    CreateQuickCpp();   // Create our Quick C++ environment, which is initially hidden.
-                        // This is removed for the Sandbox version (but can stay)
-    
-    // Get a Quick Dev Button.  We don't need to save the object reference because
-    // we are just using it to automatically close the program down by sending a CloseWindow()
-    // message when it is pressed.
-    //
-    // This is a little advanced, in a way.  Put the mouse over "SendCloseMessage" for a description
-
-    win.DevButton("Press Me to Close Program").SendCloseMessage();
+{   
 
     // Get a slider.  We keep the control object reference here because we want to use it in
     // the GetEvent() loop below.
 
-    auto & cSlider = win.DevSlider("Value"); 
+    auto & cSlider = CSagebox::DevSlider("Value");  // You can also use win.DevSlider(), which will create the main window
+
+    CSagebox::DevAllowClose(true);  // Add a generic close button to the Dev Window --> When false, it just adds the 'x' in the upper-right 
 
     // Main Event Loop -- go until someone close the window (or press the button, since we set it to
     // send a Window Close event
@@ -53,7 +45,7 @@ int main()
     // As noted, in Sagebox Quick C++, GetEvent() will show the window if it is hidden, unless we used Hide() to
     // purposely keep it from view. 
 
-    while(win.GetEvent())
+    while(CSagebox::GetEvent())     // if using "win.DevSlider", then also use win.GetEvent()
     {
         // If the sloder moved, then print the position.  We can get the position
         // inside a variable on the Moved() call. Here, we just call to get the position.

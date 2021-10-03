@@ -35,8 +35,6 @@
 
 int main()
 {
-    CreateQuickCpp();
-
     // We want our window of a specific size.  We also want to set a title.
 
     win.SetWindowSize(866,665,true);    // true = Set as client/canvas size, not including frame

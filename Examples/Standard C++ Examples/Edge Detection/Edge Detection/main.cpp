@@ -125,6 +125,5 @@ int Sobel()
 
 int main()
 {
-    CreateQuickCpp();
     return Sobel();
 }

@@ -45,8 +45,6 @@
 
 int main()
 {
-    CreateQuickCpp();
-
     SIZE RectSize = { 200,200 };                                    // Rectangle Size
     auto RectPos  = ((CPoint) win.GetWindowSize() - RectSize)/2;    // Put Rectangle in center of window 
                                                                     // Uses CPoint (a class-based version of POINT) to calculate placement.

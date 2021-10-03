@@ -35,8 +35,8 @@ Global
 		{4A918FAB-4A9C-4BD6-BFDD-A766439D27DD}.Windows Debug|x64.Build.0 = Windows Debug|x64
 		{4A918FAB-4A9C-4BD6-BFDD-A766439D27DD}.Windows Debug|x86.ActiveCfg = Windows Debug|Win32
 		{4A918FAB-4A9C-4BD6-BFDD-A766439D27DD}.Windows Debug|x86.Build.0 = Windows Debug|Win32
-		{6ADF7330-7253-4990-A69D-D3FB3D0E5AC7}.Debug Optimized|x64.ActiveCfg = Debug Optimized|x64
-		{6ADF7330-7253-4990-A69D-D3FB3D0E5AC7}.Debug Optimized|x64.Build.0 = Debug Optimized|x64
+		{6ADF7330-7253-4990-A69D-D3FB3D0E5AC7}.Debug Optimized|x64.ActiveCfg = Debug|Win32
+		{6ADF7330-7253-4990-A69D-D3FB3D0E5AC7}.Debug Optimized|x64.Build.0 = Debug|Win32
 		{6ADF7330-7253-4990-A69D-D3FB3D0E5AC7}.Debug Optimized|x86.ActiveCfg = Debug Optimized|Win32
 		{6ADF7330-7253-4990-A69D-D3FB3D0E5AC7}.Debug Optimized|x86.Build.0 = Debug Optimized|Win32
 		{6ADF7330-7253-4990-A69D-D3FB3D0E5AC7}.Debug|x64.ActiveCfg = Debug|x64

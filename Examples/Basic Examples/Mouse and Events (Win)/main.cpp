@@ -38,8 +38,6 @@
 
 int main()
 {
-    CreateQuickCpp();           // Create the Sagebox Quick C++ Window and environment.
-  
     // Print a message out to the window.  
 
     win << "Click Mouse on the Window to Draw Rectangle.  Close Window to Exit.";
@@ -70,7 +68,7 @@ int main()
         // win.GetColor() is used, but an RGB color can also be put in place, either directly, with 
         // Windows COLORREF type of RgbColor type. -- for example, using "{255,0,0}" is the same as win.GetColor("Red");
 
-        if (win.MouseClicked(pMouse)) win.DrawRectangle(pMouse.x-50,pMouse.y-50,100,100,win.GetColor("Red"));
+        if (win.MouseClicked(pMouse)) win.DrawRectangle(pMouse.x-50,pMouse.y-50,100,100,SageColor::Red);
     }
 
     // We don't need to hold up the exit, since the user closed the window manually.

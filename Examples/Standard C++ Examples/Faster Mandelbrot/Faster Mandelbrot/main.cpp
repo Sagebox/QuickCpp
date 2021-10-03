@@ -92,8 +92,6 @@
 
 int main()
 {
-    CreateQuickCpp();
-
     SIZE cWinSize      = { 800, 600 };     // Initial Window Size
     CfPoint cfWinSize   = cWinSize;         // Get a floating-point version of window size
  

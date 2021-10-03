@@ -23,8 +23,6 @@
 
 int main()
 {
-    CreateQuickCpp();   // Create the Sagebox Quick C++ environment 
-    
     // Create a Dial Widget and put it at (25,25) in the window.
 
     CDialWidget cDial(win.GetWindow(),25,25 + 25); 

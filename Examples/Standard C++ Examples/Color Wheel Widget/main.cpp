@@ -49,8 +49,6 @@
 
 int main()
 {
-    CreateQuickCpp();
-
   //  CSageBox cSageBox("Multiple Color Widget Example with the Color Wheel Widget");
 
     // Create our Window.  Use NoAutoUpdate() to turn off auto updates of the window, and InnerSize()
@@ -61,7 +59,7 @@ int main()
     win.SetWindowSize(880,700);
     win.SetWinLocation(100,100);
 
-    win.Cls("darkblue");       // Set an initial background color to blue
+    win.Cls(SageColor::DarkBlue);       // Set an initial background color to blue
     
     constexpr int iX = 50;      // Starting point of outer-most rectangle
     constexpr int iY = 50;
@@ -76,8 +74,8 @@ int main()
 
     // Set a coule random colors for each rectangle
 
-    cColor1.SetRGBValue(win.GetColor("blue"));    
-    cColor2.SetRGBValue(win.GetColor("red"));            
+    cColor1.SetRGBValue(SageColor::Blue);    
+    cColor2.SetRGBValue(SageColor::Red);            
     
     // Wait until we get an event (or the window closes, in which case it returns FALSE and exits
     // Usually, GetEvent() won't return until there is an event (or a Window Close).  In this case,
@@ -102,8 +100,8 @@ int main()
     
         // Update the upper-left corner of each rectangle with the RGB values
 
-        win.printf(iX + 5        ,iY + 5,        "Outer Square Color = (%d,%d,%d)",    rgbColor1.iRed,rgbColor2.iGreen,rgbColor1.iBlue); 
-        win.printf(iX + 100 + 5,iY + 100 +5,    "Inner Square Color = (%d,%d,%d)",    rgbColor2.iRed,rgbColor2.iGreen,rgbColor2.iBlue); 
+        win.printf(iX + 5        ,iY + 5,    "Outer Square Color = (%d,%d,%d)",    rgbColor1.iRed,rgbColor2.iGreen,rgbColor1.iBlue); 
+        win.printf(iX + 100 + 5,iY + 100 +5, "Inner Square Color = (%d,%d,%d)",    rgbColor2.iRed,rgbColor2.iGreen,rgbColor2.iBlue); 
 
         win.Update();    // Update the window since we turned off auto updates
 

@@ -17,9 +17,6 @@
 
 int main()
 {
-    CreateQuickCpp();   // Create the Sagebox Quick C++ environment.  If we use the Console Sandbox
-                        // version (Sandbox.lib instead of QuickCpp.lib), we don't need to do this, as it is done automatically.
-    
     // Set Window title. This is optional. Here, it is helpful to have a display of
     // the differences with version.  CString() is used in Sagebox as stack-and-heap-based
     // string() replacement, for quick string operations with easier usage.
@@ -42,7 +39,7 @@ int main()
     // Draw a red circle to show how we can do it.  Instead of GetColor("Red)", rgb value
     // {255,0,0}, a Windows COLORREF, or RgbColor type value may also be used. 
 
-    win.DrawCircle(300,200,100,win.GetColor("red"));  
+    win.DrawCircle(300,200,100,SageColor::Red);  
 
     return win.ExitButton();    // We use the exit button (or win.WaitforClose()) to prevent the program from 
                                 // terminating and destroying the window since we don't have any other user input.

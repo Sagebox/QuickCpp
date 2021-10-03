@@ -34,15 +34,11 @@
 
 int main(int argc,char * argv[])
 {
-    CreateQuickCpp();               // The Sagebox version uses "CSagebox cSagebox" to create the Sagebox class, and must
-                                    // then create its own Window.  CreateQuickCpp() creates it for you.  See CVisualSort::InitWindow()
-                                    // for more comments, as there are 3-4 lines that changes, leaving the rest of the program exactly the same
-                                    // as the Sagebox version.
     CVisualSort cSort;        
 
     // Since we're passing in the window object, the rest of the program doesn't need to know or care which one we are.
 
-    cSort.main(win.GetWindow());    // Pass in the Window object -- In the Sagebox version, this passes in the Sagebox object, but it could
+    cSort.main(win);    // Pass in the Window object -- In the Sagebox version, this passes in the Sagebox object, but it could
                                     //                               also create window and pass it in.
 }
 

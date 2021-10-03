@@ -43,13 +43,11 @@
 
 int main()
 {
-    CreateQuickCpp();           // Create Sagebox Quick C++ environment. 
-
     constexpr int iRadiusMin = 1;
     constexpr int iRadiusMax = 100;
 
-    RgbColor rgbColor = { 255,0,0 };  // Or we could use win.GetColor("Red'); 
-                                      // We can also use a standard Windows COLORREF RGB(255,0,0); 
+    RgbColor rgbColor = SageColor::Red;  // We could use {255,0,0}
+                                         // We can also use a standard Windows COLORREF RGB(255,0,0); 
 
     // In this case, we're showing how to get one number, so we draw a circle instead. 
     // We added "NoCancel()" so the user must enter a value (unless the window is close)
